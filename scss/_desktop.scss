@@ -1,0 +1,73 @@
+//===============================================//
+//===// Responsive layout - desktop section //===//
+//===============================================//
+
+@include desktop {
+  //==================//
+  //===// Header //===//
+  //==================//
+
+  header {
+    padding: 1.15rem 0;
+  }
+
+  //===// Header > Logo//===//
+
+  .logo {
+    &__text {
+      font-size: 2.5rem;
+    }
+
+    &__icon {
+      font-size: 2.35rem;
+    }
+  }
+
+  //================//
+  //===// Main //===//
+  //================//
+
+  //===// Main > Menu //===//
+
+  .menu {
+    flex: 22.5%;
+  }
+
+  .nav {
+    &__link {
+      font-size: 1.7rem;
+    }
+  }
+
+  //===// Main > Content //===//
+
+  .content {
+    flex: 77.5%;
+
+    &__title {
+      font-size: 2.1rem;
+    }
+
+    &__text {
+      font-size: 1.25rem;
+    }
+
+    & .form {
+      &__label {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  //==================//
+  //===// Footer //===//
+  //==================//
+
+  //===// Footer > Content //===//
+
+  .footer {
+    &__text {
+      font-size: 1.3rem;
+    }
+  }
+}

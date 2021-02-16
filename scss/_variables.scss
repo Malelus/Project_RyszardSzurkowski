@@ -1,0 +1,79 @@
+//===========================================//
+//===// Brakepoint (Responsive layouts) //===//
+//===========================================//
+
+$brake: (
+  'mobile': 43.75em,
+  //700px
+  'desktop': 62.5em,
+  //1000px
+);
+
+//=================//
+//===// Fonts //===//
+//=================//
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400:700&display=swap');
+
+$font: (
+  'txt': (
+    'Montserrat',
+    sans-serif,
+  ),
+  'txt-accent': (
+    'Roboto',
+    sans-serif,
+  ),
+  'fa': (
+    'Font Awesome 5 Free',
+  ),
+);
+
+//==================//
+//===// Colors //===//
+//==================//
+
+$color: (
+  'bg': #a2cdf2,
+  'txt': #414141,
+  'txt-accent': #222222,
+  'accent': #0377bf,
+  'btn': #ffffff,
+);
+
+//===================//
+//===// Timings //===//
+//===================//
+
+$time: (
+  /*0.4s*/ 'transition-static': 0.4s,
+  /*0.4s*/ 'transition-time': 0.4s,
+  /*0.2s*/ 'btn-anim-time': 0.2s,
+  /*0.4s*/ 'popup-time': 0.4s,
+  /*1.0s*/ 'logo-anim-time': 1s,
+  /*.35s*/ 'nav-hide-time': 0.35s,
+  /*0.5s*/ 'nav-show-time': 0.5s,
+  /*8.0s*/ 'form-result-visibility': 8s,
+  /*0.4s*/ 'anim-delay': 0.4s,
+  /*1.25s*/ 'anim-delay--logo-icon': 1.25s
+);
+
+//======================================//
+//===// Exporting variables for js //===//
+//======================================//
+
+:root {
+  --transition-static: #{time(transition-static)};
+  --transition-time: #{time(transition-time)};
+  --btn-anim-time: #{time(btn-anim-time)};
+  --popup-time: #{time(popup-time)};
+  --logo-anim-time: #{time(logo-anim-time)};
+  --nav-hide-time: #{time(nav-hide-time)};
+  --nav-show-time: #{time(nav-show-time)};
+  --main-anim-time: #{time(main-anim-time)};
+  --form-result-visibility: #{time(form-result-visibility)};
+  --anim-delay: #{time(anim-delay)};
+  --anim-delay--logo-icon: #{time(anim-delay--logo-icon)};
+}
