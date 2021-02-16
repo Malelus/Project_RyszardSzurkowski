@@ -756,7 +756,7 @@ footer {
 }
 
 .footer__text {
-  color: #ffffff;
+  color: #222222;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
@@ -775,7 +775,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 2.5rem 0 5rem 0;
+    margin: 5rem 0;
   }
   .menu {
     -webkit-box-flex: 30%;
