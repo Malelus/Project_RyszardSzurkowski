@@ -52,8 +52,8 @@ img {
 }
 
 :root {
-  --transition-static: 0.4s;
-  --transition-time: 0.4s;
+  --transition-static: 0.25s;
+  --transition-time: 0.25s;
   --btn-anim-time: 0.2s;
   --popup-time: 0.4s;
   --logo-anim-time: 1s;
@@ -138,12 +138,12 @@ img {
   margin-left: 1em;
 }
 
-.btn--form__send:hover, .btn--form__send:focus {
+.btn--form__send:hover {
   background: #004a1d;
   color: #ffffff;
 }
 
-.btn--form__reset:hover, .btn--form__reset:focus {
+.btn--form__reset:hover {
   background: #7f0000;
   color: #ffffff;
 }
@@ -523,8 +523,8 @@ img {
   bottom: 0;
   z-index: 101;
   background: #0377bf;
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
+  -webkit-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
 }
 
 .slide-r-l.transition--active {
@@ -581,7 +581,7 @@ header {
 
 .logo__icon {
   opacity: 0;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-family: "Font Awesome 5 Free";
   margin-left: 0.01em;
   -webkit-animation: logo__icon-anim 1s 1.25s ease forwards;
@@ -756,7 +756,7 @@ footer {
 }
 
 .footer__text {
-  color: #222222;
+  color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
@@ -769,22 +769,18 @@ footer {
     font-size: 2rem;
   }
   .logo__icon {
-    font-size: 1.85rem;
+    font-size: 1.7rem;
   }
   .main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: 2.5rem 0 5rem 0;
   }
   .menu {
     -webkit-box-flex: 30%;
         -ms-flex: 30%;
             flex: 30%;
-    height: calc(100vh - 6.5rem);
-    background: #0377bf;
-    border-radius: 0 50px 50px 0;
-    margin: 1rem 0 0 0;
-    padding: 10em 0.5em 10em 0;
   }
   .nav {
     position: relative;
@@ -803,25 +799,25 @@ footer {
   }
   .nav__list {
     padding: 0;
+    padding: 2em 1em 2em 0;
+    border-radius: 0 50px 50px 0;
   }
-  .nav__item--inside + .nav__item--inside {
+  .nav__item + .nav__item {
     margin: 2rem 0 0 0;
-  }
-  .nav__item--outside {
-    margin: 4rem 0 0 0;
   }
   .nav__link {
     display: block;
-    padding: 1em 0;
     background: #a2cdf2;
     border-radius: 0 50px 50px 0;
     color: #222222;
     font-size: 1.5rem;
+    padding: 0.75em 0;
   }
   .content {
     -webkit-box-flex: 70%;
         -ms-flex: 70%;
             flex: 70%;
+    margin: 0;
   }
   .content__title {
     font-size: 1.8rem;
@@ -876,20 +872,20 @@ footer {
     font-size: 2.5rem;
   }
   .logo__icon {
-    font-size: 2.35rem;
+    font-size: 2.2rem;
   }
   .menu {
-    -webkit-box-flex: 22.5%;
-        -ms-flex: 22.5%;
-            flex: 22.5%;
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
   }
   .nav__link {
     font-size: 1.7rem;
   }
   .content {
-    -webkit-box-flex: 77.5%;
-        -ms-flex: 77.5%;
-            flex: 77.5%;
+    -webkit-box-flex: 75%;
+        -ms-flex: 75%;
+            flex: 75%;
   }
   .content__title {
     font-size: 2.1rem;

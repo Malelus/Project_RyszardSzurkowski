@@ -67,16 +67,14 @@
     }
 
     &__send {
-      &:hover,
-      &:focus {
+      &:hover {
         background: #004a1d;
         color: color(btn);
       }
     }
 
     &__reset {
-      &:hover,
-      &:focus {
+      &:hover {
         background: #7f0000;
         color: color(btn);
       }
