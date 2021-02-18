@@ -3,13 +3,19 @@
 //===============================================//
 
 @include desktop {
+  //================//
+  //===// Body //===//
+  //================//
+
+  //===// Body > Background Image //===//
+
+  .background {
+    background-position-y: 6rem;
+  }
+
   //==================//
   //===// Header //===//
   //==================//
-
-  header {
-    padding: 1.15rem 0;
-  }
 
   //===// Header > Logo//===//
 
@@ -26,6 +32,27 @@
   //================//
   //===// Main //===//
   //================//
+
+  //===// Main > Background Bluring //===//
+
+  .landing-bg {
+    height: calc(100vh - 6rem);
+    width: 25%;
+    top: 6rem;
+  }
+
+  .form-bg {
+    height: calc(100vh - 6rem);
+    top: 6rem;
+
+    &--default {
+      width: 25%;
+    }
+
+    &--mobile {
+      width: 75%;
+    }
+  }
 
   //===// Main > Menu //===//
 

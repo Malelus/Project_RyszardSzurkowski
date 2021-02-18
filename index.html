@@ -14,13 +14,12 @@
     <link rel="icon" href="./img/icon.png" />
     <title>Ryszard Szurowski</title>
   </head>
-  <body>
+  <body class="background">
     <div class="transition transition--active slide-r-l"></div>
 
-    <header>
+    <header class="header">
       <div class="logo">
-        <span class="logo__text">Ryszard Szurowski</span>
-        <span class="fas fa-biking logo__icon"></span>
+        <span class="logo__text">Ryszard Szurowski<i class="fas fa-biking logo__icon"></i></span>
       </div>
 
       <div class="nav-toggle">
@@ -30,42 +29,43 @@
       </div>
     </header>
 
+    <div class="landing-bg"></div>
+
     <main class="main">
       <section class="menu">
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="./index.html" class="nav__link nav__link--active" title="Strona główna"
+              <a
+                href="./index.html"
+                class="nav__link nav__link--landing nav__link--landing--active"
+                title="Strona główna"
                 >Strona główna</a
               >
             </li>
             <li class="nav__item">
-              <a href="./pages/first.html" class="nav__link" title="Życiorys">Życiorys</a>
+              <a href="./pages/first.html" class="nav__link nav__link--landing" title="Życiorys">Życiorys</a>
             </li>
             <li class="nav__item">
-              <a href="./pages/second.html" class="nav__link" title="Sukcesy">Sukcesy</a>
+              <a href="./pages/second.html" class="nav__link nav__link--landing" title="Sukcesy">Sukcesy</a>
             </li>
             <li class="nav__item">
               <a
                 href="./pages/form.html"
-                class="nav__link external"
+                class="nav__link nav__link--landing external"
                 target="_blank"
-                title="Klub pamięci Ryszarda Szurowskiego"
+                title="Klub pamięci"
                 >Klub pamięci</a
               >
             </li>
           </ul>
         </nav>
       </section>
-      <section class="content">
-        <div class="container">
-          <img src="./img/content.jpg" alt="Ryszard Szurowski" class="content__photo" />
-        </div>
-      </section>
+      <section class="content"></section>
     </main>
 
     <footer class="footer">
-      <button class="btn btn--small btn--about show-popup" data-target="#about_page">
+      <button class="btn btn--outer btn--about show-popup" data-target="#about_page">
         <i class="fas fa-info-circle btn btn--info btn--icon"></i> O stronie
       </button>
       <p class="footer__text">2021 &copy Mateusz Narowski 3Bi</p>
@@ -75,9 +75,9 @@
       <div class="popup__overlay show-popup" data-target="#about_page"></div>
       <div class="popup__inner">
         <p class="popup__title">Ryszard Szurowski</p>
-        <p class="popup__text"><i class="fas fa-info"></i> - Strona o Ryszardzie Szurowskim.</p>
+        <p class="popup__text"><i class="fas fa-info popup__icon"></i> - Strona o Ryszardzie Szurowskim.</p>
         <p class="popup__text">
-          <i class="fab fa-wpforms"></i> - Posiada formularz zapisu do klubu pamięci.<a
+          <i class="fab fa-wpforms popup__icon"></i> - Posiada formularz zapisu do klubu pamięci.<a
             href="./pages/form.html"
             class="popup__link external"
             target="_blank"
@@ -86,8 +86,7 @@
           ></a>
         </p>
         <p class="popup__text">
-          <i class="fab fa-github"></i> - Strona została umieszczona również na repozytorium
-          GitHub'a.<a
+          <i class="fab fa-github popup__icon"></i> - Strona została umieszczona również na repozytorium GitHub'a.<a
             href="https://github.com/Malelus/RyszardSzurowski"
             class="popup__link external"
             target="_blank"
@@ -96,11 +95,11 @@
           ></a>
         </p>
         <p class="popup__subtitle">Autor: Mateusz Narowski</p>
-        <p class="popup__text"><i class="fas fa-circle popup__circle"></i> Klasa: 3Bi</p>
-        <p class="popup__text"><i class="fas fa-circle popup__circle"></i> Grupa: I</p>
-        <p class="popup__text"><i class="far fa-calendar-alt"></i> - 23.02.2021r.</p>
+        <p class="popup__text"><i class="fas fa-circle popup__icon popup__circle"></i> Klasa: 3Bi</p>
+        <p class="popup__text"><i class="fas fa-circle popup__icon popup__circle"></i> Grupa: I</p>
+        <p class="popup__text"><i class="far fa-calendar-alt popup__icon"></i> - 23.02.2021r.</p>
         <span>
-          <button class="btn btn--medium btn--about show-popup" data-target="#about_page">
+          <button class="btn btn--inner btn--about show-popup" data-target="#about_page">
             <i class="fas fa-times btn btn--close btn--icon"></i> Zamknij
           </button>
         </span>

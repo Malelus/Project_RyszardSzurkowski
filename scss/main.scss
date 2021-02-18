@@ -4,9 +4,9 @@
 
 @import './reset', './functions', './variables', './assets', './transitions';
 
-//====================================================//
-//===// Setting default page styling & scrollbar //===//
-//====================================================//
+//===========================================================//
+//===// Setting default page styling & scrollbar (Body) //===//
+//===========================================================//
 
 body {
   background: color(bg);
@@ -29,6 +29,17 @@ body {
   }
 }
 
+//===// Body > Background Image //===//
+
+.background {
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-position-y: 4rem;
+}
+
 //====================//
 //===// Reusable //===//
 //====================//
@@ -38,7 +49,6 @@ body {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
-}
 
 //==================//
 //===// Header //===//
@@ -47,20 +57,20 @@ body {
 header {
   position: relative;
   z-index: 3;
-  background: color(bg);
   padding: 1rem 0;
 }
 
-//===// Header > Logo//===//
+//===// Header > Logo //===//
 
 .logo {
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
 
   &__text {
     display: inline-block;
     font-size: 1.45rem;
     font-family: font(txt);
+    font-weight: 500;
     animation: logo__text-anim time(logo-anim-time) time(anim-delay) ease forwards;
   }
 
@@ -68,7 +78,7 @@ header {
     opacity: 0;
     font-size: 1.15rem;
     font-family: font(fa);
-    margin-left: 0.01em;
+    margin-left: 0.15em;
     animation: logo__icon-anim time(logo-anim-time) time(anim-delay--logo-icon) ease forwards;
   }
 }
@@ -82,12 +92,27 @@ main {
   z-index: 1;
 }
 
+//===// Main > Background Bluring //===//
+
+.form-bg {
+  position: absolute;
+  height: calc(100vh - 4rem);
+  top: 4rem;
+  bottom: 0;
+
+  &--default {
+    width: 100%;
+    left: 0;
+    backdrop-filter: blur(6px);
+  }
+}
+
 //===// Main > Menu //===//
 
 .nav {
   &-toggle {
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 10px;
   }
 
@@ -108,6 +133,8 @@ main {
   }
 
   &__list {
+    position: relative;
+    z-index: 5;
     list-style: none;
     background: color(accent);
     text-align: center;
@@ -115,14 +142,8 @@ main {
   }
 
   &__item {
-    &--inside {
-      & + & {
-        margin: 0.5em 0 0 0;
-      }
-    }
-
-    &--outside {
-      margin: 1.25em 0 0 0;
+    & + & {
+      margin: 0.35em 0 0 0;
     }
   }
 
@@ -137,6 +158,14 @@ main {
 
     @include mouse-hover;
 
+    &--landing {
+      color: color(txt-accent);
+
+      &--active {
+        text-decoration: underline;
+      }
+    }
+
     &--active {
       text-decoration: underline;
     }
@@ -146,25 +175,26 @@ main {
 //===// Main > Content //===//
 
 .content {
-  margin: 2.5rem 0 5rem 0;
+  // margin: 2.5rem 0 5rem 0;
 
-  &__photo {
-    border: 3px solid color(accent);
-    border-radius: 10px;
-    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.16);
-    margin: 3rem 0 0 0;
-  }
+  // &__photo {
+  //   border: 3px solid color(accent);
+  //   border-radius: 10px;
+  //   box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.16);
+  //   margin: 3rem 0 0 0;
+  // }
 
   &__title {
     text-align: center;
     font-family: font(txt);
+    color: color(txt-accent);
     margin-bottom: 1.5em;
   }
 
   &__text {
     text-align: justify;
     font-size: 1rem;
-    font-family: font(txt-accent);
+    font-family: font(txt);
     font-weight: 400;
 
     & + & {
@@ -186,6 +216,7 @@ main {
       text-align: center;
       font-size: 1rem;
       margin: 1.2em 0 0.6em 0;
+      color: color(txt-accent);
     }
 
     &__input {
@@ -205,6 +236,7 @@ main {
       opacity: 0;
       visibility: hidden;
       text-align: center;
+      color: color(txt-accent);
       transform: translateY(-100px);
 
       &--true {
@@ -240,8 +272,9 @@ footer {
 
 .footer {
   &__text {
-    color: color(txt-accent);
-    font-family: font(txt-accent);
+    color: color(bg);
+    font-family: font(bg);
+    font-size: 0.9rem;
     font-weight: 700;
   }
 }

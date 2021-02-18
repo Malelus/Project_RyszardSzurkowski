@@ -3,13 +3,19 @@
 //==============================================//
 
 @include mobile {
+  //================//
+  //===// Body //===//
+  //================//
+
+  //===// Body > Background Image //===//
+
+  .background {
+    background-position-y: 5rem;
+  }
+
   //==================//
   //===// Header //===//
   //==================//
-
-  header {
-    padding: 1.075rem 0;
-  }
 
   //===// Header > Logo//===//
 
@@ -29,7 +35,37 @@
 
   .main {
     display: flex;
-    margin: 5rem 0;
+  }
+
+  //===// Main > Background Bluring //===//
+
+  .landing-bg {
+    position: absolute;
+    height: calc(100vh - 5rem);
+    width: 30%;
+    top: 5rem;
+    bottom: 0;
+    backdrop-filter: blur(6px);
+  }
+
+  .form-bg {
+    position: absolute;
+    height: calc(100vh - 5rem);
+    top: 5rem;
+    bottom: 0;
+
+    &--default {
+      width: 30%;
+      left: 0;
+      backdrop-filter: none;
+      background: color(bg);
+    }
+
+    &--mobile {
+      width: 70%;
+      right: 0;
+      backdrop-filter: blur(6px);
+    }
   }
 
   //===// Main > Menu //===//
@@ -40,9 +76,9 @@
 
   .nav {
     position: relative;
+
     opacity: 1;
     pointer-events: all;
-    height: auto;
     width: 100%;
     margin: 0;
     box-shadow: none;
@@ -53,24 +89,37 @@
     }
 
     &__list {
-      padding: 0;
-      padding: 2em 1em 2em 0;
-      border-radius: 0 50px 50px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 75vh;
+      background: transparent;
     }
 
     &__item {
-      & + & {
-        margin: 2rem 0 0 0;
-      }
+      margin: 0;
     }
 
     &__link {
-      display: block;
-      background: color(bg);
-      border-radius: 0 50px 50px 0;
-      color: color(txt-accent);
+      color: color(txt);
       font-size: 1.5rem;
+      font-weight: 400;
       padding: 0.75em 0;
+
+      &--landing {
+        color: color(accent);
+        font-weight: 700;
+
+        &--active {
+          color: color(txt-accent);
+          text-decoration: none;
+        }
+      }
+
+      &--active {
+        color: color(accent);
+        text-decoration: none;
+      }
     }
   }
 
@@ -110,6 +159,22 @@
   //==================//
   //===// Assets //===//
   //==================//
+
+  //===// Buttons //===//
+
+  .btn {
+    &--outer {
+      font-size: 1rem;
+    }
+
+    &--inner {
+      font-size: 1.175rem;
+    }
+
+    &--form {
+      font-size: 1.35rem;
+    }
+  }
 
   //===// Popup //===//
 

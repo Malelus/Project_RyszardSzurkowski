@@ -4,25 +4,28 @@
 
 .btn {
   position: relative;
-  background: color(btn);
+  background: color(bg);
   border: none;
   outline: none;
-  color: color(txt);
+  color: color(accent);
   font-family: font(txt);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all time(btn-anim-time) ease;
 
-  &--small {
-    font-size: 1rem;
+  &--outer {
+    font-size: 0.9rem;
   }
 
-  &--medium {
+  &--inner {
     font-size: 1.175rem;
-  }
+    background: color(accent);
+    color: color(txt-accent);
 
-  &--big {
-    font-size: 1.35rem;
+    & > .btn--icon {
+      background: color(accent);
+      color: color(txt-accent);
+    }
   }
 
   &--icon {
@@ -57,6 +60,7 @@
   &--form {
     background: color(accent);
     color: color(txt-accent);
+    font-size: 1.35rem;
     font-family: font(txt);
     margin-top: 2em;
     padding: 0.5em 0.8em;
@@ -69,14 +73,14 @@
     &__send {
       &:hover {
         background: #004a1d;
-        color: color(btn);
+        color: color(txt-accent);
       }
     }
 
     &__reset {
       &:hover {
         background: #7f0000;
-        color: color(btn);
+        color: color(txt-accent);
       }
     }
   }
@@ -236,10 +240,14 @@
     @include mouse-hover;
   }
 
+  &__icon {
+    color: color(accent);
+  }
+
   &__circle {
     position: relative;
     top: 65%;
-    color: color(txt);
+
     font-size: 0.25rem;
     transform: translateY(-65%);
   }
