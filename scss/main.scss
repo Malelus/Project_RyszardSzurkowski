@@ -184,6 +184,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.1;
+    pointer-events: none;
     outline: 1px solid color(bg);
     outline-offset: -1px;
   }

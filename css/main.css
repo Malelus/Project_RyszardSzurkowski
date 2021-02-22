@@ -705,6 +705,7 @@ main {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0.1;
+  pointer-events: none;
   outline: 1px solid #ffffff;
   outline-offset: -1px;
 }
@@ -891,8 +892,8 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 70vh;
-    margin: 0 0 5em 0;
     background: transparent;
+    margin: 0 0 5em 0;
   }
   .nav__item {
     margin: 0;
