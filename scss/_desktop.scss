@@ -3,8 +3,21 @@
 //===============================================//
 
 @include desktop {
+  //====================//
+  //===// Reusable //===//
+  //====================//
+
+  //===// Container //===//
+
   .container {
     grid-area: container;
+  }
+
+  //===// Scroll up //===//
+
+  .scrollUp {
+    left: auto;
+    right: 15px;
   }
 
   //==================//
@@ -59,7 +72,7 @@
 
   .content {
     flex: 75%;
-    margin: 0 0 5rem 0;
+    margin: 0 0 6.5rem 0;
 
     &__container {
       display: grid;
@@ -102,6 +115,7 @@
         text-align: left;
         font-size: 4vw;
         line-height: 0.9;
+        margin: 0;
       }
 
       &__label {
@@ -119,6 +133,18 @@
   .footer {
     &__text {
       font-size: 1.3rem;
+    }
+  }
+
+  //==================//
+  //===// Assets //===//
+  //==================//
+
+  //===// Buttons //===//
+
+  .btn {
+    &--scrollUp {
+      font-size: 3.5rem;
     }
   }
 }

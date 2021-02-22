@@ -13,6 +13,10 @@
   cursor: pointer;
   transition: all time(btn-anim-time) ease;
 
+  &--scrollUp {
+    font-size: 2rem;
+  }
+
   &--outer {
     font-size: 0.9rem;
   }
@@ -32,6 +36,10 @@
     pointer-events: none;
     font-family: 'Font Awesome 5 Free';
     box-shadow: none;
+
+    &--rounded {
+      border-radius: 50%;
+    }
   }
 
   &--about {

@@ -83,6 +83,10 @@ img {
   transition: all 0.2s ease;
 }
 
+.btn--scrollUp {
+  font-size: 2rem;
+}
+
 .btn--outer {
   font-size: 0.9rem;
 }
@@ -103,6 +107,10 @@ img {
   font-family: 'Font Awesome 5 Free';
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.btn--icon--rounded {
+  border-radius: 50%;
 }
 
 .btn--about {
@@ -582,6 +590,25 @@ body::-webkit-scrollbar-thumb {
   font-weight: bold;
 }
 
+.scrollUp {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.scrollUp.scrollUp--active {
+  opacity: 1;
+  visibility: visible;
+}
+
 header {
   position: relative;
   z-index: 3;
@@ -699,7 +726,7 @@ main {
 
 .content {
   position: relative;
-  margin: 2.5rem 0 5rem 0;
+  margin: 2.5rem 0 6.5rem 0;
 }
 
 .content__photo {
@@ -718,7 +745,7 @@ main {
   text-align: center;
   font-family: "Poppins", sans-serif;
   color: #2e2e2e;
-  margin: 2em 0 1.5em 0;
+  margin: 1.5em 0 1.15em 0;
 }
 
 .content__text {
@@ -729,7 +756,7 @@ main {
 }
 
 .content__text + .content__text {
-  margin-top: 2.5em;
+  margin-top: 2.15em;
 }
 
 .content .form {
@@ -822,6 +849,9 @@ footer {
 @media screen and (min-width: 43.75em) {
   .background {
     background-position-y: 5rem;
+  }
+  .scrollUp {
+    left: 7.5px;
   }
   header {
     background: #ffffff;
@@ -940,6 +970,9 @@ footer {
   .footer__text {
     font-size: 1.15rem;
   }
+  .btn--scrollUp {
+    font-size: 2.75rem;
+  }
   .btn--outer {
     font-size: 1rem;
   }
@@ -988,6 +1021,10 @@ footer {
     -ms-grid-column: 1;
     grid-area: container;
   }
+  .scrollUp {
+    left: auto;
+    right: 15px;
+  }
   .logo__text {
     font-size: 2.5rem;
   }
@@ -1015,7 +1052,7 @@ footer {
     -webkit-box-flex: 75%;
         -ms-flex: 75%;
             flex: 75%;
-    margin: 0 0 5rem 0;
+    margin: 0 0 6.5rem 0;
   }
   .content__container {
     display: -ms-grid;
@@ -1055,12 +1092,16 @@ footer {
     text-align: left;
     font-size: 4vw;
     line-height: 0.9;
+    margin: 0;
   }
   .content .form__label {
     font-size: 1.3rem;
   }
   .footer__text {
     font-size: 1.3rem;
+  }
+  .btn--scrollUp {
+    font-size: 3.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -43,6 +43,8 @@ body {
 //===// Reusable //===//
 //====================//
 
+//===// Container //===//
+
 .container {
   position: relative;
   width: 80%;
@@ -50,8 +52,29 @@ body {
   margin: 0 auto;
 }
 
+//===// Text decoration //===//
+
 .bold {
   font-weight: bold;
+}
+
+//===// Scroll up //===//
+
+.scrollUp {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  background: transparent;
+  box-shadow: none;
+  transition: all time(btn-anim-time) ease;
+
+  &.scrollUp--active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 //==================//
@@ -180,7 +203,7 @@ main {
 
 .content {
   position: relative;
-  margin: 2.5rem 0 5rem 0;
+  margin: 2.5rem 0 6.5rem 0;
 
   &__photo {
     position: fixed;
@@ -197,7 +220,7 @@ main {
     text-align: center;
     font-family: font(txt);
     color: color(txt);
-    margin: 2em 0 1.5em 0;
+    margin: 1.5em 0 1.15em 0;
   }
 
   &__text {
@@ -207,7 +230,7 @@ main {
     font-weight: 400;
 
     & + & {
-      margin-top: 2.5em;
+      margin-top: 2.15em;
     }
   }
 

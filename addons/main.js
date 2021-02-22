@@ -15,6 +15,10 @@ window.onload = () => {
   const popupBtn = document.querySelectorAll('.show-popup');
   const popup = document.querySelector('.popup');
 
+  // - scrollUp
+  const scrollUp = document.getElementById('scrollUp');
+  var rootElement = document.documentElement;
+
   // - form
   const form = document.getElementById('form');
   const formResult = document.querySelector('.form__result');
@@ -124,6 +128,7 @@ window.onload = () => {
   });
 
   //===// Page transition //===//
+
   setTimeout(() => {
     transitionElement.classList.remove('transition--active');
   }, timeTransition);
@@ -158,12 +163,35 @@ window.onload = () => {
   });
 
   //===// Popup close on escape key press //===//
+
   document.addEventListener('keydown', esc);
   function esc(e) {
     if (e.which === 27) {
       popup.classList.remove('popup--active');
     }
   }
+
+  //===// Scroll up //===//
+
+  //===// Scroll up button show //===//
+
+  document.addEventListener('scroll', () => {
+    var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+    if (rootElement.scrollTop / scrollTotal > 0.33) {
+      scrollUp.classList.add('scrollUp--active');
+    } else {
+      scrollUp.classList.remove('scrollUp--active');
+    }
+  });
+
+  //===// Scroll to the top of page button //===//
+
+  document.addEventListener('click', () => {
+    rootElement.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
 
   //===// Form //===//
 
