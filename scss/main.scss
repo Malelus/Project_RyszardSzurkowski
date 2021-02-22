@@ -161,8 +161,7 @@ main {
 
   &__list {
     position: relative;
-    z-index: 5;
-    list-style: none;
+    z-index: 4;
     background: color(accent);
     text-align: center;
     padding: 1em 0;
@@ -187,10 +186,6 @@ main {
 
     &--landing {
       color: color(txt-accent);
-
-      &--active {
-        text-decoration: underline;
-      }
     }
 
     &--active {
