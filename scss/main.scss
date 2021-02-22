@@ -209,13 +209,17 @@ main {
     pointer-events: none;
     outline: 1px solid color(bg);
     outline-offset: -1px;
+
+    &-inner {
+      margin: 1.5em 0;
+    }
   }
 
   &__title {
     text-align: center;
     font-family: font(txt);
     color: color(txt);
-    margin: 1.5em 0 1.15em 0;
+    margin: 1.5em 0 0.85em 0;
   }
 
   &__text {
@@ -225,7 +229,7 @@ main {
     font-weight: 400;
 
     & + & {
-      margin-top: 2.15em;
+      margin-top: 1.5em;
     }
   }
 

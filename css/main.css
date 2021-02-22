@@ -736,11 +736,15 @@ main {
   outline-offset: -1px;
 }
 
+.content__photo-inner {
+  margin: 1.5em 0;
+}
+
 .content__title {
   text-align: center;
   font-family: "Poppins", sans-serif;
   color: #2e2e2e;
-  margin: 1.5em 0 1.15em 0;
+  margin: 1.5em 0 0.85em 0;
 }
 
 .content__text {
@@ -751,7 +755,7 @@ main {
 }
 
 .content__text + .content__text {
-  margin-top: 2.15em;
+  margin-top: 1.5em;
 }
 
 .content .form {
