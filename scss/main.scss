@@ -280,6 +280,10 @@ main {
       color: color(txt-accent);
       transform: translateY(-100px);
 
+      padding: 0.5em 1em;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.5);
+
       &--true {
         animation: form__result-anim time(form-result-visibility) ease;
       }
