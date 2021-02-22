@@ -7,8 +7,7 @@
 #### Strona została napisana w edytorze Visual Studio Code używając składni SCSS preprocesora SASS do pisania kodu CSS oraz użyto ikon ze strony https://fontawesome.com/.
 
 - czcionki:
-  - [Montserrat](https://fonts.google.com/specimen/Montserrat?query=mon),
-  - [Roboto](https://fonts.google.com/specimen/Roboto?query=robot).
+  - [Poppins](https://fonts.google.com/specimen/Poppins).
 
 ---
 
