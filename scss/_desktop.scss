@@ -64,6 +64,7 @@
     &__container {
       display: grid;
       grid-template-areas: 'container photo';
+      margin-top: 6rem;
     }
 
     &__photo {
@@ -79,8 +80,12 @@
     &__title {
       font-size: 2.1rem;
 
-      &--info {
+      &--biography {
         margin-top: 2.5rem;
+      }
+
+      &--successes {
+        margin-top: 0;
       }
     }
 

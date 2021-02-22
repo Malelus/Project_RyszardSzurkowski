@@ -24,7 +24,7 @@ body {
 
   &::-webkit-scrollbar-thumb {
     background: color(accent);
-    border: 3.25px solid color(bg);
+    border: 2.75px solid color(bg);
     border-radius: 100px;
   }
 }
@@ -48,6 +48,10 @@ body {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 //==================//
@@ -193,7 +197,7 @@ main {
     text-align: center;
     font-family: font(txt);
     color: color(txt);
-    margin-bottom: 1.5em;
+    margin: 2em 0 1.5em 0;
   }
 
   &__text {
