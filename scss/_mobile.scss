@@ -17,6 +17,10 @@
   //===// Header //===//
   //==================//
 
+  header {
+    background: color(bg);
+  }
+
   //===// Header > Logo//===//
 
   .logo {
@@ -40,18 +44,18 @@
   //===// Main > Background Bluring //===//
 
   .landing-bg {
-    position: absolute;
-    height: calc(100vh - 5rem);
+    position: fixed;
+    height: 100%;
     width: 30%;
-    top: 5rem;
+    top: 0;
     bottom: 0;
     backdrop-filter: blur(6px);
   }
 
   .form-bg {
-    position: absolute;
-    height: calc(100vh - 5rem);
-    top: 5rem;
+    position: fixed;
+    height: 100%;
+    top: 0;
     bottom: 0;
 
     &--default {
@@ -90,9 +94,10 @@
 
     &__list {
       display: flex;
+      justify-content: space-evenly;
       flex-direction: column;
-      justify-content: space-around;
-      height: 75vh;
+      height: 70vh;
+      margin: 0 0 5em 0;
       background: transparent;
     }
 
@@ -127,7 +132,6 @@
 
   .content {
     flex: 70%;
-    margin: 0;
 
     &__title {
       font-size: 1.8rem;

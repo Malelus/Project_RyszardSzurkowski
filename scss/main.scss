@@ -34,7 +34,6 @@ body {
 .background {
   background-image: url('../img/background.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-position-y: 4rem;
@@ -176,19 +175,23 @@ main {
 //===// Main > Content //===//
 
 .content {
-  // margin: 2.5rem 0 5rem 0;
+  position: relative;
+  margin: 2.5rem 0 5rem 0;
 
-  // &__photo {
-  //   border: 3px solid color(accent);
-  //   border-radius: 10px;
-  //   box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.16);
-  //   margin: 3rem 0 0 0;
-  // }
+  &__photo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    outline: 1px solid color(bg);
+    outline-offset: -1px;
+  }
 
   &__title {
     text-align: center;
     font-family: font(txt);
-    color: color(txt-accent);
+    color: color(txt);
     margin-bottom: 1.5em;
   }
 
@@ -207,6 +210,12 @@ main {
     max-width: 500px;
     margin: 0 auto;
     padding: 2em 0;
+
+    &__title {
+      text-transform: uppercase;
+      color: color(txt-accent);
+      font-weight: 900;
+    }
 
     &__label,
     &__input {
@@ -237,6 +246,7 @@ main {
       opacity: 0;
       visibility: hidden;
       text-align: center;
+      font-weight: 900;
       color: color(txt-accent);
       transform: translateY(-100px);
 
@@ -276,7 +286,7 @@ footer {
     color: color(bg);
     font-family: font(bg);
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 

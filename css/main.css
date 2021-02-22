@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
 *,
 *::before,
 *::after {
@@ -11,6 +11,11 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
 }
 
 a {
@@ -561,7 +566,6 @@ body::-webkit-scrollbar-thumb {
 .background {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-position-y: 4rem;
@@ -689,10 +693,26 @@ main {
   text-decoration: underline;
 }
 
+.content {
+  position: relative;
+  margin: 2.5rem 0 5rem 0;
+}
+
+.content__photo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.1;
+  outline: 1px solid #ffffff;
+  outline-offset: -1px;
+}
+
 .content__title {
   text-align: center;
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
+  color: #2e2e2e;
   margin-bottom: 1.5em;
 }
 
@@ -711,6 +731,12 @@ main {
   max-width: 500px;
   margin: 0 auto;
   padding: 2em 0;
+}
+
+.content .form__title {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 900;
 }
 
 .content .form__label, .content .form__input {
@@ -742,6 +768,7 @@ main {
   opacity: 0;
   visibility: hidden;
   text-align: center;
+  font-weight: 900;
   color: #ffffff;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
@@ -784,12 +811,15 @@ footer {
 .footer__text {
   color: #ffffff;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 43.75em) {
   .background {
     background-position-y: 5rem;
+  }
+  header {
+    background: #ffffff;
   }
   .logo__text {
     font-size: 2rem;
@@ -803,18 +833,18 @@ footer {
     display: flex;
   }
   .landing-bg {
-    position: absolute;
-    height: calc(100vh - 5rem);
+    position: fixed;
+    height: 100%;
     width: 30%;
-    top: 5rem;
+    top: 0;
     bottom: 0;
     -webkit-backdrop-filter: blur(6px);
             backdrop-filter: blur(6px);
   }
   .form-bg {
-    position: absolute;
-    height: calc(100vh - 5rem);
-    top: 5rem;
+    position: fixed;
+    height: 100%;
+    top: 0;
     bottom: 0;
   }
   .form-bg--default {
@@ -853,13 +883,15 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    height: 75vh;
+    height: 70vh;
+    margin: 0 0 5em 0;
     background: transparent;
   }
   .nav__item {
@@ -887,7 +919,6 @@ footer {
     -webkit-box-flex: 70%;
         -ms-flex: 70%;
             flex: 70%;
-    margin: 0;
   }
   .content__title {
     font-size: 1.8rem;
@@ -944,8 +975,10 @@ footer {
 }
 
 @media screen and (min-width: 62.5em) {
-  .background {
-    background-position-y: 6rem;
+  .container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: container;
   }
   .logo__text {
     font-size: 2.5rem;
@@ -954,13 +987,7 @@ footer {
     font-size: 2.2rem;
   }
   .landing-bg {
-    height: calc(100vh - 6rem);
     width: 25%;
-    top: 6rem;
-  }
-  .form-bg {
-    height: calc(100vh - 6rem);
-    top: 6rem;
   }
   .form-bg--default {
     width: 25%;
@@ -980,12 +1007,42 @@ footer {
     -webkit-box-flex: 75%;
         -ms-flex: 75%;
             flex: 75%;
+    margin: 0 0 5rem 0;
+  }
+  .content__container {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'container photo';
+  }
+  .content__photo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: photo;
+    position: relative;
+    top: 0;
+    left: auto;
+    right: 0;
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
   }
   .content__title {
     font-size: 2.1rem;
   }
+  .content__title--info {
+    margin-top: 2.5rem;
+  }
   .content__text {
     font-size: 1.25rem;
+  }
+  .content .form__title {
+    position: absolute;
+    max-width: 10ch;
+    left: 0.25rem;
+    top: 0.45rem;
+    text-align: left;
+    font-size: 4vw;
+    line-height: 0.9;
   }
   .content .form__label {
     font-size: 1.3rem;

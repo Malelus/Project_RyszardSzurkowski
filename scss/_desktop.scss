@@ -3,14 +3,8 @@
 //===============================================//
 
 @include desktop {
-  //================//
-  //===// Body //===//
-  //================//
-
-  //===// Body > Background Image //===//
-
-  .background {
-    background-position-y: 6rem;
+  .container {
+    grid-area: container;
   }
 
   //==================//
@@ -36,15 +30,10 @@
   //===// Main > Background Bluring //===//
 
   .landing-bg {
-    height: calc(100vh - 6rem);
     width: 25%;
-    top: 6rem;
   }
 
   .form-bg {
-    height: calc(100vh - 6rem);
-    top: 6rem;
-
     &--default {
       width: 25%;
     }
@@ -70,9 +59,29 @@
 
   .content {
     flex: 75%;
+    margin: 0 0 5rem 0;
+
+    &__container {
+      display: grid;
+      grid-template-areas: 'container photo';
+    }
+
+    &__photo {
+      grid-area: photo;
+      position: relative;
+      top: 0;
+      left: auto;
+      right: 0;
+      transform: none;
+      opacity: 1;
+    }
 
     &__title {
       font-size: 2.1rem;
+
+      &--info {
+        margin-top: 2.5rem;
+      }
     }
 
     &__text {
@@ -80,6 +89,16 @@
     }
 
     & .form {
+      &__title {
+        position: absolute;
+        max-width: 10ch;
+        left: 0.25rem;
+        top: 0.45rem;
+        text-align: left;
+        font-size: 4vw;
+        line-height: 0.9;
+      }
+
       &__label {
         font-size: 1.3rem;
       }
