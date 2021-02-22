@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap");
 *,
 *::before,
 *::after {
@@ -669,7 +669,7 @@ main {
 .nav__link {
   font-size: 1.15rem;
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   text-underline-offset: 3.5px;
   color: #ffffff;
