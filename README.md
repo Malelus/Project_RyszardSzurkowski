@@ -1,6 +1,6 @@
-# Strona o Ryszardzie Szurowskim
+# Strona o Ryszardzie Szurkowskim
 
-> ### [Link do strony](https://malelus.github.io/RyszardSzurowski/)
+> ### [Link do strony](https://malelus.github.io/RyszardSzurkowski/)
 
 ---
 
@@ -49,6 +49,8 @@
     - przycisk Zamknij,
     - kliknięcie poza obszar okna,
     - za pomocą przycisku ESC.
+
+- przycisk na dole strony Życiorys oraz Sukcesy przenoszący na górę strony.
 
 #### Wygląd:
 
