@@ -211,6 +211,9 @@ main {
     outline-offset: -1px;
 
     &-inner {
+      position: relative;
+      left: 10%;
+      transform: translateX(-10%);
       margin: 1.5em 0;
     }
   }

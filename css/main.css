@@ -737,6 +737,10 @@ main {
 }
 
 .content__photo-inner {
+  position: relative;
+  left: 10%;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
   margin: 1.5em 0;
 }
 
