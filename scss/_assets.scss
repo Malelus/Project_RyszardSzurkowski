@@ -70,9 +70,9 @@
     color: color(txt-accent);
     font-size: 1.35rem;
     font-family: font(txt);
+    border-radius: 10px;
     margin-top: 2em;
     padding: 0.5em 0.8em;
-    border-radius: 10px;
 
     & + & {
       margin-left: 1em;
@@ -195,7 +195,7 @@
     right: 0;
     bottom: 0;
     z-index: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
   }
 
   &__inner {
