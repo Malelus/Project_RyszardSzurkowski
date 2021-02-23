@@ -152,6 +152,13 @@
 
     &__text {
       font-size: 1.125rem;
+
+      &--quote {
+        left: 80%;
+        width: 50%;
+        font-size: 1.275rem;
+        transform: translate(-80%, -75%);
+      }
     }
 
     & .form {
@@ -181,7 +188,7 @@
 
   .btn {
     &--scrollUp {
-      font-size: 2.75rem;
+      font-size: 2.5rem;
     }
 
     &--outer {

@@ -39,7 +39,7 @@
 
 - okno popup umieszczone w stopce strony, zawiera:
 
-  - skrócone informacje o zawartości strony (dodatkowy link do formularza szczepień),
+  - skrócone informacje o zawartości strony (dodatkowy link do formularza zapisu do klubu pamięci),
   - link do repozytorium GitHub'a,
   - informacje o autorze,
   - datę wykonania,
@@ -50,7 +50,7 @@
     - kliknięcie poza obszar okna,
     - za pomocą przycisku ESC.
 
-- przycisk na dole strony Życiorys oraz Sukcesy przenoszący na górę strony.
+- przycisk na dole strony przenoszący na górę strony.
 
 #### Wygląd:
 

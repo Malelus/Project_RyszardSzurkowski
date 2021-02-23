@@ -17,7 +17,7 @@ window.onload = () => {
 
   // - scrollUp
   const scrollUp = document.getElementById('scrollUp');
-  var rootElement = document.documentElement;
+  const rootElement = document.documentElement;
 
   // - form
   const form = document.getElementById('form');
@@ -186,7 +186,7 @@ window.onload = () => {
 
   //===// Scroll to the top of page button //===//
 
-  document.addEventListener('click', () => {
+  scrollUp.addEventListener('click', () => {
     rootElement.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -200,6 +200,18 @@ window.onload = () => {
 
     form.reset();
     formResult.classList.add('form__result--true');
+
+    window.scrollTo({
+      top: 200,
+      behavior: 'smooth',
+    });
+
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }, timeFormResult);
 
     setTimeout(() => {
       location.reload();

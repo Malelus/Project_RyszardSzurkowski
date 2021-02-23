@@ -52,30 +52,30 @@
         </nav>
       </section>
       <section class="content">
-        <h1 class="content__title form__title">Formularz zapisu do klubu pamięci</h1>
+          <h1 class="content__title form__title">Formularz zapisu do klubu pamięci</h1>
 
-        <form class="form" id="form">
-          <label for="first-name" class="form__label">Imię</label>
-          <input type="text" id="first-name" class="form__input" required />
-          <label for="last-name" class="form__label">Nazwisko</label>
-          <input type="text" id="last-name" class="form__input" required />
-          <label for="phone-num" class="form__label">Numer telefonu</label>
-          <input type="tel" id="phone-num" class="form__input" required />
-          <div class="form__btn">
-            <input
-              type="submit"
-              value="Wyślij"
-              class="btn btn--form btn--form btn--form__send"
-              title="Wyślij formularz"
-            />
-            <input
-              type="reset"
-              value="Wyczyść"
-              class="btn btn--form btn--form btn--form__reset"
-              title="Wyczyść wprowadzone dane"
-            />
-          </div>
-        </form>
+          <form class="form" id="form">
+            <label for="first-name" class="form__label">Imię</label>
+            <input type="text" id="first-name" class="form__input" required />
+            <label for="last-name" class="form__label">Nazwisko</label>
+            <input type="text" id="last-name" class="form__input" required />
+            <label for="phone-num" class="form__label">Numer telefonu</label>
+            <input type="tel" id="phone-num" class="form__input" required />
+            <div class="form__btn">
+              <input
+                type="submit"
+                value="Wyślij"
+                class="btn btn--form btn--form btn--form__send"
+                title="Wyślij formularz"
+              />
+              <input
+                type="reset"
+                value="Wyczyść"
+                class="btn btn--form btn--form btn--form__reset"
+                title="Wyczyść wprowadzone dane"
+              />
+          </form>
+        </div>
 
         <div class="container">
           <p class="content__text form__result">
@@ -84,6 +84,10 @@
         </div>
       </section>
     </main>
+
+    <button class="btn btn--scrollUp scrollUp" id="scrollUp">
+      <i class="fas fa-arrow-circle-up btn btn--icon btn--icon--rounded"></i>
+    </button>
 
     <footer class="footer">
       <button class="btn btn--outer btn--about show-popup" data-target="#about_page">

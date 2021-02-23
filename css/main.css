@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;900&display=swap");
 *,
 *::before,
 *::after {
@@ -92,9 +92,9 @@ img {
 }
 
 .btn--inner {
-  font-size: 1.175rem;
   background: #b42121;
   color: #ffffff;
+  font-size: 1.175rem;
 }
 
 .btn--inner > .btn--icon {
@@ -587,7 +587,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .scrollUp {
@@ -697,14 +697,15 @@ main {
 }
 
 .nav__link {
+  color: #ffffff;
   font-size: 1.15rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-decoration: none;
   text-underline-offset: 3.5px;
-  color: #ffffff;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .nav__link:hover, .nav__link:focus {
@@ -745,14 +746,15 @@ main {
 }
 
 .content__title {
+  color: #2e2e2e;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  color: #2e2e2e;
   margin: 1.5em 0 0.85em 0;
 }
 
 .content__text {
   text-align: justify;
+  letter-spacing: 0.25px;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -762,6 +764,25 @@ main {
   margin-top: 1.5em;
 }
 
+.content__text--quote {
+  position: fixed;
+  top: 75%;
+  left: 60%;
+  width: 90%;
+  max-width: 40ch;
+  -webkit-transform: translate(-60%, -75%);
+          transform: translate(-60%, -75%);
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 10px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 200;
+  padding: 0.5em 1em;
+}
+
 .content .form {
   max-width: 500px;
   margin: 0 auto;
@@ -769,9 +790,11 @@ main {
 }
 
 .content .form__title {
-  text-transform: uppercase;
   color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   font-weight: 900;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
 .content .form__label, .content .form__input {
@@ -779,10 +802,12 @@ main {
 }
 
 .content .form__label {
-  text-align: center;
-  font-size: 1rem;
   color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
   margin: 1.2em 0 0.6em 0;
+  text-shadow: 1px 1px 1px black;
 }
 
 .content .form__input {
@@ -805,12 +830,13 @@ main {
   visibility: hidden;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  color: #ffffff;
+  letter-spacing: 1.2px;
   text-align: center;
   font-weight: 900;
-  color: #ffffff;
+  padding: 0.5em 1em;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
-  padding: 0.5em 1em;
 }
 
 .content .form__result--true {
@@ -971,6 +997,13 @@ footer {
   .content__text {
     font-size: 1.125rem;
   }
+  .content__text--quote {
+    left: 80%;
+    width: 50%;
+    font-size: 1.275rem;
+    -webkit-transform: translate(-80%, -75%);
+            transform: translate(-80%, -75%);
+  }
   .content .form__label {
     font-size: 1.15rem;
   }
@@ -978,7 +1011,7 @@ footer {
     font-size: 1.15rem;
   }
   .btn--scrollUp {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
   .btn--outer {
     font-size: 1rem;
@@ -1039,26 +1072,26 @@ footer {
     font-size: 2.2rem;
   }
   .landing-bg {
-    width: 25%;
+    width: 22.5%;
   }
   .form-bg--default {
-    width: 25%;
+    width: 22.5%;
   }
   .form-bg--mobile {
-    width: 75%;
+    width: 77.5%;
   }
   .menu {
-    -webkit-box-flex: 25%;
-        -ms-flex: 25%;
-            flex: 25%;
+    -webkit-box-flex: 22.5%;
+        -ms-flex: 22.5%;
+            flex: 22.5%;
   }
   .nav__link {
     font-size: 1.7rem;
   }
   .content {
-    -webkit-box-flex: 75%;
-        -ms-flex: 75%;
-            flex: 75%;
+    -webkit-box-flex: 77.5%;
+        -ms-flex: 77.5%;
+            flex: 77.5%;
     margin: 0 0 6.5rem 0;
   }
   .content__container {
@@ -1091,6 +1124,16 @@ footer {
   .content__text {
     font-size: 1.25rem;
   }
+  .content__text--quote {
+    top: 22.5%;
+    width: 40%;
+    font-size: 1.4rem;
+    -webkit-transform: translate(-80%, -22.5%);
+            transform: translate(-80%, -22.5%);
+  }
+  .content .form {
+    margin-top: 5rem;
+  }
   .content .form__title {
     position: absolute;
     max-width: 10ch;
@@ -1108,7 +1151,7 @@ footer {
     font-size: 1.3rem;
   }
   .btn--scrollUp {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

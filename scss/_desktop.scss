@@ -43,23 +43,23 @@
   //===// Main > Background Bluring //===//
 
   .landing-bg {
-    width: 25%;
+    width: 22.5%;
   }
 
   .form-bg {
     &--default {
-      width: 25%;
+      width: 22.5%;
     }
 
     &--mobile {
-      width: 75%;
+      width: 77.5%;
     }
   }
 
   //===// Main > Menu //===//
 
   .menu {
-    flex: 25%;
+    flex: 22.5%;
   }
 
   .nav {
@@ -71,7 +71,7 @@
   //===// Main > Content //===//
 
   .content {
-    flex: 75%;
+    flex: 77.5%;
     margin: 0 0 6.5rem 0;
 
     &__container {
@@ -104,9 +104,18 @@
 
     &__text {
       font-size: 1.25rem;
+
+      &--quote {
+        top: 22.5%;
+        width: 40%;
+        font-size: 1.4rem;
+        transform: translate(-80%, -22.5%);
+      }
     }
 
     & .form {
+      margin-top: 5rem;
+
       &__title {
         position: absolute;
         max-width: 10ch;
@@ -144,7 +153,7 @@
 
   .btn {
     &--scrollUp {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
   }
 }
