@@ -1,6 +1,6 @@
 # Strona o Ryszardzie Szurkowskim
 
-> ### [Link do strony](https://malelus.github.io/Project_RyszardSzurkowski/)
+> ### [Link do strony](https://szurkowski.mndev.eu)
 
 ---
 
